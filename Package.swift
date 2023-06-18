@@ -23,24 +23,44 @@
 //  THE SOFTWARE.
 
 
+//import PackageDescription
+//
+//let package = Package(
+//    name: "SnapKit",
+//    platforms: [
+//        .iOS(.v10),
+//        .macOS(.v10_11),
+//        .tvOS(.v10)
+//    ],
+//    products: [
+//        .library(name: "SnapKit", targets: ["SnapKit"]),
+//        .library(name: "SnapKit-Dynamic", type: .dynamic, targets: ["SnapKit"]),
+//    ],
+//    targets: [
+//        .target(name: "SnapKit", path: "Sources"),
+//        .testTarget(name: "SnapKitTests", dependencies: ["SnapKit"]),
+//    ],
+//    swiftLanguageVersions: [
+//        .v5
+//    ]
+//)
+
+
 import PackageDescription
 
 let package = Package(
-    name: "SnapKit",
-    platforms: [
-        .iOS(.v10),
-        .macOS(.v10_11),
-        .tvOS(.v10)
-    ],
+    name: "MyLibrary",
     products: [
-        .library(name: "SnapKit", targets: ["SnapKit"]),
-        .library(name: "SnapKit-Dynamic", type: .dynamic, targets: ["SnapKit"]),
+        .library(
+            name: "MyLibrary",
+            targets: ["MyLibrary"]
+        ),
     ],
     targets: [
-        .target(name: "SnapKit", path: "Sources"),
-        .testTarget(name: "SnapKitTests", dependencies: ["SnapKit"]),
-    ],
-    swiftLanguageVersions: [
-        .v5
+        .target(
+            name: "MyLibrary",
+            path: "Sources"
+        ),
     ]
 )
+
